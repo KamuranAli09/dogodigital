@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Lato:ital,wght@1,300&family=Oswald:wght@300&family=Source+Sans+Pro:wght@200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body style="font-family: 'Edu VIC WA NT Beginner', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;  color:white;">
+    <div class="navbar" style="overflow: hidden;
+background-color: #c43c1e;
+position: fixed;top:0%; width:100%;left:0%">
+        <span><a href="index.html" style="float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;" hover="background: #ddd;"><img src="logoproper.png" alt="" width="150px"></a>
+        </span>
+        <div style="padding-top: 1%;">
+            <a href="#news" style="float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;" hover="background: #ddd;
+  color: black; padding-top:1.9%;">Accounts</a>
+
+  <a href="ical.html" style="float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;" hover="background: #ddd;
+color: black;margin-top:1.9%;">Interest Calculator</a>
+            <a href="#contact" style="float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;" hover="background: #ddd;
+  color: black;margin-top:1.9%;">Investments</a>
+            <a href="#contact" style="float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;" hover="background: #ddd;
+  color: black;margin-top:1.9%;" title="Products Are Being Added !">DoGo Products</a>
+            <a href="#contact" style="float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;" hover="background: #ddd;
+  color: black;">Ask Us</a>
+            <a href="#contact" style="float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;" hover="background: #ddd;
+  color: black;">Other Services</a>
+        </div>
+
+    </div>
+    <section
+        style="align-items: center; margin-Top:120px;padding-left:35%;padding-top:3%;padding-bottom:300px;background-image: url(bodybackground.jpg);">
+        <h1>Register</h1>
+        <hr style="width: 70px;margin-left:0;margin-bottom:3%;">
+        <form action="input" style="height:500px; display:grid">
+            <label for="email">Enter email id ?</label>
+            <input type="email" value=" " id="email"
+                style="color:black;width:30%;height: 35px;border-radius: 30px;text-align: center;">
+            <label for="name">Enter your name ?</label>
+            <input type="name" value=" " id="name"
+                style="color:black;width:30%;height: 35px;border-radius: 30px;text-align: center;">
+            <label for="phone">Enter your phone number?</label>
+            <input type="phone" value=" " id="phone"
+                style="color:black;width:30%;height: 35px;border-radius: 30px;text-align: center;">
+            <label for="upi">Enter your upi id ?</label>
+            <input type="upi" value=" " id="upi"
+                style="color:black;width:30%;height: 35px;border-radius: 30px;text-align: center;">
+            <label for="dob">Enter date of birth ?</label>
+            <input type="date" value=" " id="DOB"
+                style="color:black;width:30%;height: 35px;border-radius: 30px;text-align: center;">
+            <label for="cars">Gender</label>
+            <select name="cars" id="cars"
+                style="color:black;width:30%;height: 35px;border-radius: 30px;text-align: center;">
+                <option value="volvo">Male</option>
+                <option value="saab">Female</option>
+                <option value="mercedes">Others</option>
+            </select>
+
+            <label for="pass1">Create a password?</label>
+            <input type="password" value=" " id="pas1"
+                style="color:black;width:30%;height: 35px;border-radius: 30px;text-align: center;">
+            <label for="pas2">Confirm your password ?</label>
+            <input type="password" value="" id="pas2"
+                style="color:black;width:30%;height: 35px;border-radius: 30px;text-align: center;">
+            
+            <p>Show Password<input type="checkbox" onclick="myFunction()" style="left:0%; width:15px; height:15px; border-radius: 30px;"></p>
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("pas2");
+                    if (x.type === "password") {
+                        x.type = "text";
+                    } else {
+                        x.type = "password";
+                    }
+                }
+            </script>
+            <script>  
+                function matchPassword() {  
+                  var pw1 = document.getElementById("pas1");  
+                  var pw2 = document.getElementById("pas2");  
+                  if(pw1 != pw2)  
+                  {   
+                    alert("Passwords did not match");  
+                  } else {  
+                    alert("Password created successfully");  
+                  }  
+                }  
+                </script>
+            <div>
+
+                <button type="submit" onclick="matchPassword()"
+                    style="margin-top:3%; width:10%;height:35px;border-radius: 30px;background-color: navajowhite;cursor: pointer;">Sign
+                    Up</button>
+            </div>
+            <div>
+                <h4>If you have already an account click on Login below </h4>
+                <button type="submit"
+                    style="cursor:pointer;height:35px; border-radius: 30px; width:75px; background-color: #c43c1e;"><a href="login.html"style="text-decoration: none;color:white;">Login</a></button>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>

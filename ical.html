@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Calculator</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Lato:ital,wght@1,300&family=Oswald:wght@300&family=Source+Sans+Pro:wght@200&display=swap"
+        rel="stylesheet">
+
+</head>
+<body style="margin:15%; margin-top:0;margin-bottom:0; font-family: 'Edu VIC WA NT Beginner', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Source Sans Pro', sans-serif; background-image: url(bodybackground.jpg);">
+    <div style="width:100%;height:50px;background-color:skyblue;">
+        <a href="index.html"><img src="Transparent.png" style="width:50px;" alt=""></a>
+    </div>
+    <section style="text-align: center; display: flex;
+    justify-content: center;color:white;
+    align-items: center; background-image: url(bodybackground.jpg);background-repeat: no-repeat;">
+        <div class="container" style="width: 550px;
+        height: 750px;  
+        display: grid;
+        place-items: center;
+        padding-Top: 14px;
+        padding-bottom: 14px;">
+            <h2>Interest Calculator
+                <hr>
+            </h2>
+            <p>Enter the required details and <br> click on the submit button !<br> You will see the calculated interest <br> above
+                the button</p>
+            <input type="number" id="principal" placeholder="Principal" style="
+           
+            background: #edf1f4;
+            
+            border-radius: 30px;
+            outline: none;
+            border:none;
+            padding: 24px;
+            color:black">
+            <input type="number" id="rate" placeholder="Rate Of Interest" style="
+            background: #edf1f4;
+            border-radius: 30px;
+            outline: none;padding: 24px;
+            border:none;
+            color:black">
+            <input type="number" id="time" placeholder="Time in years" style="
+            background: #edf1f4;
+            border:none;padding: 24px;
+            border-radius: 30px;
+            outline: none;
+            color:black">
+            <div class="result">
+                <p>Interest: <span id="interest"></span><br></p>
+                <p>Total Interest: <span id="plus"></span></p>
+            </div>
+
+            <button id="btn" class="button-56" role="button" style="width: 100px;
+            height: 40px;
+            background-color:#c43c1e;
+            border-radius: 30px;
+            outline: none;cursor: pointer;
+            " >Submit</button>
+        </div>
+        <script>
+
+            /*Simple Interest Formula = 
+            p*r*t/100*/
+    
+            btn.addEventListener("click", () => {
+                /*Get input values to the variables */
+                let p = parseInt(document.getElementById('principal').value);
+                let r = document.getElementById('rate').value;
+                let t = document.getElementById('time').value;
+                let btn = document.getElementById('btn');
+    
+                var interest = (p * r * t) / 100;
+    
+                document.getElementById('interest').innerHTML = interest;
+    
+                var plusInterest = p + interest;
+                document.getElementById('plus').innerHTML = plusInterest;
+    
+            })
+    
+        </script>
+    </section>
+
+</body>
+</html>
